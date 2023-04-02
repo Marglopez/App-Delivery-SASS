@@ -1,0 +1,43 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.pasos {
+
+    margin-top: 5rem;
+
+    &__imagen {
+        margin-bottom: -.1rem;
+    }
+
+    &__info {
+        background-color: v.$primario;
+        text-align: center;
+    }
+    
+    &__titulo {
+        color: v.$blanco;
+        margin-bottom: 2rem;
+    }
+
+    &__texto {
+        color: v.$blanco;
+        font-weight: 700;
+    }
+
+    &__imagenes {
+        @include m.desktop {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+
+    &__contenedor-imagen {
+        transition-property: transform;
+        transition-duration: 300ms;
+
+        &:hover {
+            transform: rotate(-4deg) scale(1.1);
+        }
+    }
+    
+}

@@ -1,0 +1,29 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.tiendas {
+
+    margin-left: 2rem;
+    margin-right: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__titulo {
+        text-align: center;
+        color: v.$secundario;
+        margin: 2rem 0;
+    }
+
+    &__texto {
+        text-align: center;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+}

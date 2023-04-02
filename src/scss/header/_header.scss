@@ -1,0 +1,23 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header {
+    padding: 3rem 0;
+
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    // gap: 2rem;
+
+    @include m.desktop {
+        grid-template-rows: unset;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    &__logo {
+        @include m.desktop {
+            width: 50%;
+        }
+    }
+
+}

@@ -1,0 +1,28 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.navegacion {
+    // margin-top: 2rem;
+
+    &-barra {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+
+        @include m.desktop { 
+            width: auto;
+            flex-direction: row;
+        }
+    }
+
+    &__link {
+        color: v.$negro;
+        font-size: 2rem;
+        font-weight: 900;
+    }
+
+    &__link--boton {
+        @include m.boton(v.$primario, v.$blanco);
+    }
+}
